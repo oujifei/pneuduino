@@ -56,7 +56,7 @@ Pressure Regulator v2
 
 These examples aim to teach the basic functions of the Pneuduino library.
 
-01 Physical and Virtual Addresses
+### 01 Physical and Virtual Addresses
 
 **Boards:** Master, one valve board (preferably with a physical address not equal to 1)
 
@@ -66,7 +66,7 @@ This example demonstrates the Pneuduino library&#39;s support for physical and v
 
 Upload the code for this demo to the master board, and observe what occurs. First, the LEDs flash simultaneously, indicating physical address mode. The LED corresponding to the valve board&#39;s physical address remains lit. After a few seconds, the LEDs flash in sequence, indicating virtual address mode. Now, LED 1 will remain lit, as the board has been mapped to virtual address 1. A few seconds later, we switch back to physical addresses, and this process repeats indefinitely.
 
-02 Valve On/Off
+### 02 Valve On/Off
 
 **Boards:** Master and one valve board
 
@@ -76,19 +76,19 @@ This example demonstrates how to actuate valves, while also showing the basic fo
 
 Each valve on the Pneuduino valve board has three ports. From bottom to top, these are output, supply, and exhaust. Typically, the supply port is connected to a source of compressed air, and the exhaust port is left open to release air into the atmosphere. The `in` function places a valve in its &quot;on&quot; state, where the output port is connected to the supply port, and the exhaust port is blocked. Likewise, the `out` function places a valve in its &quot;off&quot; state, connecting output to exhaust and leaving supply blocked.
 
-03 Read Pressure
+### 03 Read Pressure
 
 **Boards:** Master and one valve board
 
 **Tube connections:** Connect the pressure sensor to the compressed air supply as shown
 
- ![](images/image1.jpg)
+ ![](images/PressureSensor.jpg)
 
 Each Pneuduino valve board has a pressure sensor, located behind the valves. Below the pressure sensor, a set of LEDs displays the relative magnitude of the current pressure. This example shows the code necessary to read the sensor. Connect a tube to the pressure sensor as shown, and connect the compressed air supply to the tube. Run the program, and the pressure of the compressed air will be printed to the serial console. Disconnect the pressure sensor, and the pressure should drop.
 
 The pressure sensor outputs an integer from 0 to 255. Atmospheric pressure is typically around 60, and the maximum safe pressure for inflatables is roughly 90. This range is also used as the lower and upper pressure bounds for the indicator LEDs below the pressure sensor.
 
-04 Read Potentiometer and Button
+### 04 Read Potentiometer and Button
 
 **Boards:** Master, valve board, and input board
 
@@ -98,25 +98,25 @@ The Pneuduino input board contains a potentiometer and a button. This example sh
 
 In this example, the left valve is pulse-width modulated at a period of 200ms. The potentiometer&#39;s position controls the width of the pulse, adjusting the proportion of time the valve is turned on. The right valve is actuated simply when the button is pressed.
 
-05 Three-state Operation
+### 05 Three-state Operation
 
 **Boards:** Master, valve board, and input board
 
 **Tube connections:** Connect the valves as shown below
 
- ![](images/image2.jpg)
+ ![](images/ThreeState.jpg)
 
 This example demonstrates the Pneuduino library&#39;s ability to coordinate the two valves on a board to achieve three states — inflating, deflating, and holding pressure. To start, connect the left valve&#39;s output port to an inflatable. Connect the left valve&#39;s supply port to the compressed air supply. Finally, connect the exhaust ports of the two valves together.
 
 In this example, pressing the button will toggle between the three states. When the inflate function is called, the left valve is turned on to allow compressed air to flow in. When hold is called, the left valve is turned off, blocking new air from coming in, and the right valve is turned on, blocking air from exhausting out. Lastly, when deflate is called, both valves are turned off, allowing air from the inflatable to flow back into the left valve, through the connected exhaust ports, and out the right valve.
 
-06 Pressure Regulation
+### 06 Pressure Regulation
 
 **Boards:** Master, valve board, and input board
 
 **Tube connections:** Connect tubes as shown below
 
- ![](images/image3.jpg)
+ ![](images/PressureReguator.jpg)
 
 The Pneuduino library has the ability to use the onboard pressure sensor as a software pressure regulator, automatically switching the valves to inflate, deflate, or hold as necessary to maintain a pressure. The tube connections for this feature are mostly the same as for the previous example, with the exception that the output tube goes to a T connector. One branch of the T connects to the inflatable, while the other branch connects to the pressure sensor.
 
@@ -126,19 +126,19 @@ When the code is run, the potentiometer&#39;s position is used to set the desire
 
 ## Using Sensors
 
-07 I2C Gesture Sensor
+### 07 I2C Gesture Sensor
 
 **Boards:** Master, valve board, and Grove extension board
 
 **Tube connections:** Connect tubes as shown below
 
- ![](images/image4.jpg)
+ ![](images/GestureSensor.jpg)
 
 Pneuduino has an extension board that allows Grove I2C sensors to be easily incorporated into the system. On the software side, the Pneuduino library can be used together with sensor libraries, allowing sensor data to easily control pneumatic functions. This example shows the use of the Grove Gesture v1.0 sensor to control inflation and deflation.
 
 Plug the gesture sensor into the extension board. Connect the output of the left valve to the inflatable, and connect the supply port to the compressed air supply. When the gesture sensor detects your hand moving towards it, the valve is opened. Air flows into the inflatable, simulating the effect of being pushed by your hand. When your hand moves away from the sensor, air is released.
 
-08 I2C Accelerometer and Gyroscope
+### 08 I2C Accelerometer and Gyroscope
 
 **Boards:** Master, valve board, and Grove extension board
 
@@ -146,7 +146,7 @@ Plug the gesture sensor into the extension board. Connect the output of the left
 
 The Grove 6-axis Accelerometer and Gyroscope is another sensor that can be used to allow physical input to control inflatables. This example shows how to use the sensor and its corresponding library to respond to motion. In this example, the gyroscope readings are used to detect shaking. When a strong motion is detected, the valve is turned on for a moment. Gently tapping the sensor will send a brief pulse of air to the inflatable, and vigorously shaking the sensor will hold the valve open.
 
-09 Serial IO with Computer
+### 09 Serial IO with Computer
 
 **Boards:** Master and valve board
 
@@ -156,7 +156,7 @@ Pneuduino can use serial communication to send and receive information with a co
 
 Run the code on Pneuduino, and open the Arduino serial console. This simple example first prints lines of text, giving usage instructions. Use the `inflate` and `deflate` commands to control Pneuduino&#39;s valves.
 
-10 Camera
+### 10 Camera
 
 ##
 
@@ -166,19 +166,19 @@ Run the code on Pneuduino, and open the Arduino serial console. This simple exam
 
 Section TBD
 
-NOT Gate
+### NOT Gate
 
 
 
-AND Gate
+### AND Gate
 
 
 
-OR Gate
+### OR Gate
 
 
 
-XOR Gate
+### XOR Gate
 
 ##
 
@@ -186,19 +186,19 @@ XOR Gate
 
 More complex code examples combining multiple features
 
-Haptic
+### Haptic
 
 Haptic (vibration) feedback is usually done with rotating motors. However, it is possible to achieve a more natural effect by rapidly inflating and exhausting air.
 
 TBD
 
-Wave
+### Wave
 
 In this example, we demonstrate how to inflate and deflate a row of inflatables in sequence. This style of motion can be applied to propel &quot;crawling&quot; pneumatic robots.
 
 TBD
 
-Pressure Regulator v2
+### Pressure Regulator v2
 
 In this example, we explore and implement the pressure regulation feature in the Pneuduino library.
 
