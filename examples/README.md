@@ -18,10 +18,10 @@ Pneuduino can interface with sensors to dynamically respond to user input and en
 * [09 Serial IO with Computer](./SerialIO)
 ### Pneumatic Logic and Circuits
 Pneumatic logic uses air pressure to convey information. Pneuduino can be programmed to emulate logic gates and circuits. TBD.
-* [NOT Gate](#not-gate)
-* [AND Gate](#and-gate)
-* [OR Gate](#or-gate)
-* [XOR Gate](#xor-gate)
+* [10 NOT Gate](./NotGate)
+* [11 AND Gate](./AndGate)
+* [12 OR Gate](./OrGate)
+* [13 XOR Gate](./XorGate)
 ### Advanced Examples
 These examples combine multiple features and showcase more complex capabilities of Pneuduino. TBD.
 * [Haptic](#haptic)</br>
