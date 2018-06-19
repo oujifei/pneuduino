@@ -1,4 +1,4 @@
-## 04 Read Potentiometer and Button
+## Read Potentiometer and Button
 **Boards:** Master, valve board, and input board</br>
 **Tube connections:** None
 

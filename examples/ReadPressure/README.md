@@ -1,4 +1,4 @@
-## 03 Read Pressure
+## Read Pressure
 **Boards:** Master and one valve board</br>
 **Tube connections:** Connect the pressure sensor to the compressed air supply as shown
 

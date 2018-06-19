@@ -1,4 +1,4 @@
-## 09 Serial IO with Computer
+## Serial IO with Computer
 **Boards:** Master and valve board</br>
 **Tube connections:** Same as previous example
 

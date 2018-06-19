@@ -1,4 +1,4 @@
-## 08 I2C Accelerometer and Gyroscope
+## I2C Accelerometer and Gyroscope
 **Boards:** Master, valve board, and Grove extension board</br>
 **Tube connections:** Same as previous example
 

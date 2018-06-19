@@ -1,4 +1,4 @@
-## 01 Physical and Virtual Addresses
+## Physical and Virtual Addresses
 **Boards:** Master, one valve board (preferably with a physical address not equal to 1)</br>
 **Tube connections:** None
 

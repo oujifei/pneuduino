@@ -1,4 +1,4 @@
-## 07 I2C Gesture Sensor
+## I2C Gesture Sensor
 **Boards:** Master, valve board, and Grove extension board</br>
 **Tube connections:** Connect tubes as shown below
 

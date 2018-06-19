@@ -1,4 +1,4 @@
-## 02 Valve On/Off
+## Valve On/Off
 **Boards:** Master and one valve board</br>
 **Tube connections:** None
 

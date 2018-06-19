@@ -1,4 +1,4 @@
-## 05 Three-state Operation
+## Three-state Operation
 **Boards:** Master, valve board, and input board</br>
 **Tube connections:** Connect the valves as shown below
 

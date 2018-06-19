@@ -1,4 +1,4 @@
-## 06 Pressure Regulation
+## Pressure Regulation
 **Boards:** Master, valve board, and input board</br>
 **Tube connections:** Connect tubes as shown below
 
