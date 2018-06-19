@@ -17,7 +17,7 @@ Pneuduino can interface with sensors to dynamically respond to user input and en
 * [08 I2C Accelerometer and Gyroscope](./AccelerometerGyroscope)
 * [09 Serial IO with Computer](./SerialIO)
 ### Pneumatic Logic and Circuits
-Pneumatic logic uses air pressure to convey information. Pneuduino can be programmed to emulate logic gates and circuits. TBD.
+Pneumatic logic uses air pressure to convey information. Pneuduino can be programmed to emulate logic gates and circuits.
 * [10 NOT Gate](./NotGate)
 * [11 AND Gate](./AndGate)
 * [12 OR Gate](./OrGate)
