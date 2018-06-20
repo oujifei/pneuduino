@@ -16,14 +16,16 @@ Pneuduino can interface with sensors to dynamically respond to user input and en
 * [07 I2C Gesture Sensor](./GestureSensor)
 * [08 I2C Accelerometer and Gyroscope](./AccelerometerGyroscope)
 * [09 Serial IO with Computer](./SerialIO)
+* [10 Facial Recognition with Processing.org](./Processing)
 ### Pneumatic Logic and Circuits
 Pneumatic logic uses air pressure to convey information. Pneuduino can be programmed to emulate logic gates and circuits.
-* [10 NOT Gate](./NotGate)
-* [11 AND Gate](./AndGate)
-* [12 OR Gate](./OrGate)
-* [13 XOR Gate](./XorGate)
+* [11 NOT Gate](./NotGate)
+* [12 AND Gate](./AndGate)
+* [13 OR Gate](./OrGate)
+* [14 XOR Gate](./XorGate)
 ### Advanced Examples
-These examples combine multiple features and showcase more complex capabilities of Pneuduino. TBD.
+These examples combine multiple features and showcase more complex capabilities of Pneuduino.
+* [BlinkM LED Driver](./LED)
 * [Haptic](#haptic)</br>
 Haptic (vibration) feedback is usually done with rotating motors. However, it is possible to achieve a more natural effect by rapidly inflating and exhausting air.
 * [Wave](#wave)</br>
