@@ -26,8 +26,7 @@ Pneumatic logic uses air pressure to convey information. Pneuduino can be progra
 ### Advanced Examples
 These examples combine multiple features and showcase more complex capabilities of Pneuduino.
 * [BlinkM LED Driver](./LED)
-* [Haptic](#haptic)</br>
-Haptic (vibration) feedback is usually done with rotating motors. However, it is possible to achieve a more natural effect by rapidly inflating and exhausting air.
+* [Haptic (Vibration) Feedback](./Haptic)
 * [Wave](#wave)</br>
 In this example, we demonstrate how to inflate and deflate a row of inflatables in sequence. This style of motion can be applied to propel &quot;crawling&quot; pneumatic robots.
 * [Pressure Regulator v2](#pressure-regulator-v2)</br>
