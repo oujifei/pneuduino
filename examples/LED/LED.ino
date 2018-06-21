@@ -2,7 +2,8 @@
 #define LED_ADDRESS 13
 
 #undef SET_BLINKM_ADDRESS
-// uncomment this line to tell the led to set a new address instead of running the regular code
+// uncomment the #define below to generate a program that sets a new address
+// comment the line to run the regular code
 //#define SET_BLINKM_ADDRESS
 
 // the code below will only run if we aren't trying to set a new address
