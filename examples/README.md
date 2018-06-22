@@ -28,5 +28,5 @@ These examples combine multiple features and showcase more complex capabilities 
 * [BlinkM LED Driver](./LED)
 * [Haptic (Vibration) Feedback](./Haptic)
 * [Wave](./Wave)
-* [Pressure Regulator v2](#pressure-regulator-v2)</br>
-In this example, we explore and implement the pressure regulation feature in the Pneuduino library.
+* [Pressure Regulator v2](./PressureRegulator2)
+
