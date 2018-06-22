@@ -1,5 +1,5 @@
 ## Wave
-**Boards:** Master and at least 2 valve boards
+**Boards:** Master and at least 2 valve boards</br>
 **Tube connections:** Connect all supply ports to the air supply. Connect each output port to an inflatable.
 
  ![](../images/Wave.jpg)
