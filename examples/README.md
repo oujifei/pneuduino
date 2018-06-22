@@ -27,7 +27,6 @@ Pneumatic logic uses air pressure to convey information. Pneuduino can be progra
 These examples combine multiple features and showcase more complex capabilities of Pneuduino.
 * [BlinkM LED Driver](./LED)
 * [Haptic (Vibration) Feedback](./Haptic)
-* [Wave](#wave)</br>
-In this example, we demonstrate how to inflate and deflate a row of inflatables in sequence. This style of motion can be applied to propel &quot;crawling&quot; pneumatic robots.
+* [Wave](./Wave)
 * [Pressure Regulator v2](#pressure-regulator-v2)</br>
 In this example, we explore and implement the pressure regulation feature in the Pneuduino library.
