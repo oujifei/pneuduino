@@ -1,8 +1,5 @@
 #include <PneuDuino.h>
-
-// include the library for the touch sensor
-// https://github.com/Seeed-Studio/Grove_I2C_Touch_Sensor
-#include <i2c_touch_sensor.h>
+#include <Wire.h>
 
 PneuDuino p;
 
@@ -52,14 +49,18 @@ void loop() {
   // get the time
   unsigned long m = millis();
 
-  // if the sensor has detected a collision
-  if(reading < 50 && m > turn_off_time) {
+  // threshold for positive reading
+  // adjust if necessary
+  int threshold = 1000;
+
+  // if the sensor has detected vibration
+  if(reading > threshold && m > turn_off_time) {
     // turn on valve and reset time
     p.in(1, LEFT);
-    turn_off_time = m + 1000L;
+    turn_off_time = m + 500L;
   }
 
-  // no collision
+  // no vibration
   else {
     // if enough time has elapsed, turn off valve
     if(millis() > turn_off_time) {

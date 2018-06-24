@@ -3,11 +3,11 @@
 PneuDuino p;
 
 // number of valve boards
-#define N 2
+#define N 5
 
 
 // length of the wave cycle
-unsigned long cycle_length = 1000L;
+unsigned long cycle_length = 2000L;
 // time that the most recent cycle began
 unsigned long cycle_start_time;
 

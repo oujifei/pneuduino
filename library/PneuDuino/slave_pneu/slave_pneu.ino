@@ -29,11 +29,11 @@
 
 #define PRESSURE A0
 #define LOW_END 240
-#define HIGH_END 380`
+#define HIGH_END 380
 
 #define DEBUG 0
 
-#define ADDRESS 10
+#define ADDRESS 5
 
 bool madeConnection = false;
 char lastState = 'N';
