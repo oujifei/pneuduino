@@ -30,9 +30,6 @@ int read_adc()
   return data;
 }
 
-// timing data
-unsigned long turn_off_time;
-
 void setup() {
   Serial.begin(9600);
   p.begin();

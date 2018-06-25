@@ -44,7 +44,9 @@ void loop() {
 
   // read the ADC
   int reading = read_adc();
-  Serial.println(reading);
+
+  // uncomment this line to print readings (helpful for debugging)
+  //Serial.println(reading);
 
   // get the time
   unsigned long m = millis();

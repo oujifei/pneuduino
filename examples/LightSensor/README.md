@@ -1,5 +1,5 @@
 ## Light Sensor
-**Boards:** Master, valve board, and Grove extension board</br>
+**Boards:** Master, valve board, Grove extension board, and Grove I2C ADC</br>
 **Tube connections:** Same as the [Pressure Regulation](../PressureRegulator) example
 
 Pneuduino's Grove extension board allows for Grove I2C sensors to be plugged in, but analog sensors can also be used via the [Grove I2C ADC](http://wiki.seeedstudio.com/Grove-I2C_ADC/). In this example, we read analog values from the Light Sensor and use them to control the pressure of an inflatable.

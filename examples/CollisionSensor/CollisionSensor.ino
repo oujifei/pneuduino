@@ -48,8 +48,12 @@ void loop() {
   // get the time
   unsigned long m = millis();
 
+  // threshold for detecting collision
+  // note that this sensor is active low, as in a reading below a certain value is "positive"
+  int threshold = 50;
+
   // if the sensor has detected a collision
-  if(reading < 50 && m > turn_off_time) {
+  if(reading < threshold && m > turn_off_time) {
     // turn on valve and reset time
     p.in(1, LEFT);
     turn_off_time = m + 500L;
