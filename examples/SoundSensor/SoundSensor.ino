@@ -48,18 +48,17 @@ void loop() {
   // get the time
   unsigned long m = millis();
 
-  // threshold for positive reading
-  // adjust if necessary
+  // threshold for loudness
   int threshold = 1000;
 
-  // if the sensor has detected vibration
+  // if the sensor has detected a loud enough sound
   if(reading > threshold && m > turn_off_time) {
     // turn on valve and reset time
     p.in(1, LEFT);
     turn_off_time = m + 500L;
   }
 
-  // no vibration
+  // no sound
   else {
     // if enough time has elapsed, turn off valve
     if(millis() > turn_off_time) {

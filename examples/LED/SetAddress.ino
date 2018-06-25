@@ -25,6 +25,19 @@ void setup() {
 
   // done
   Wire.endTransmission();
+
+  // retreive and print address
+  delay(100);
+  
+  while(!Serial) ;
+  Serial.println("Address:");
+  
+  Wire.beginTransmission(LED_ADDRESS);
+  Wire.write('a');
+  Wire.endTransmission();
+  
+  Wire.requestFrom(LED_ADDRESS, 1);
+  Serial.println(Wire.read());
 }
 
 void loop() {

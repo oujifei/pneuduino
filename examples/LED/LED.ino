@@ -7,7 +7,7 @@
 //#define SET_BLINKM_ADDRESS
 
 // the code below will only run if we aren't trying to set a new address
-#ifndef SET_BLINKM_DDRESS
+#ifndef SET_BLINKM_ADDRESS
 
 #include <Wire.h>
 #include <PneuDuino.h>

@@ -45,26 +45,9 @@ void loop() {
   // read the ADC
   int reading = read_adc();
 
-  // get the time
-  unsigned long m = millis();
-
-  // threshold for positive reading
-  // adjust if necessary
-  int threshold = 1000;
-
-  // if the sensor has detected vibration
-  if(reading > threshold && m > turn_off_time) {
-    // turn on valve and reset time
-    p.in(1, LEFT);
-    turn_off_time = m + 500L;
-  }
-
-  // no vibration
-  else {
-    // if enough time has elapsed, turn off valve
-    if(millis() > turn_off_time) {
-      p.out(1, LEFT);
-    }
-  }
+  // set pressure proportionally to reading
+  // adjust map values if necessary
+  int pressure = map(reading, 0, 2400, 60, 90);
+  p.setPressure(1, pressure);
 }
 
