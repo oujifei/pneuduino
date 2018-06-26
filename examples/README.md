@@ -21,18 +21,19 @@ Pneuduino can interface with sensors to dynamically respond to user input and en
 * [12 Collision Sensor](./CollisionSensor)
 * [13 Piezo Vibration Sensor](./PiezoVibrationSensor)
 * [14 EMG Sensor](./EMGSensor)
-* [15 Serial IO with Computer](./SerialIO)
-* [16 Facial Recognition with Processing.org](./Processing)
+* [15 GSR Sensor](./GSRSensor)
+* [16 Serial IO with Computer](./SerialIO)
+* [17 Facial Recognition with Processing.org](./Processing)
 ### Pneumatic Logic and Circuits
 Pneumatic logic uses air pressure to convey information. Pneuduino can be programmed to emulate logic gates.
-* [17 NOT Gate](./NotGate)
-* [18 AND Gate](./AndGate)
-* [19 OR Gate](./OrGate)
-* [20 XOR Gate](./XorGate)
+* [18 NOT Gate](./NotGate)
+* [19 AND Gate](./AndGate)
+* [20 OR Gate](./OrGate)
+* [21 XOR Gate](./XorGate)
 ### Advanced Examples
 These examples combine multiple features and showcase more complex capabilities of Pneuduino.
-* [21 BlinkM LED Driver](./LED)
-* [22 Haptic (Vibration) Feedback](./Haptic)
-* [23 Wave](./Wave)
-* [24 Pressure Regulator v2](./PressureRegulator2)
+* [22 BlinkM LED Driver](./LED)
+* [23 Haptic (Vibration) Feedback](./Haptic)
+* [24 Wave](./Wave)
+* [25 Pressure Regulator v2](./PressureRegulator2)
 
