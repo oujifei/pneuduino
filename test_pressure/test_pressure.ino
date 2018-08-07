@@ -18,8 +18,10 @@ void loop() {
   int pressure = p.readPressure(1);
   Serial.println(pressure);
 
-  // set the desired pressure as a function of pot position
-  // note: to end automatic pressure management, call inflate(), deflate(), or hold()
-  p.setPressure(1, map(pot, 0, 63, 55, 90));
+  if(p.readButton(0)) {
+    p.deflate(1);
+  } else {
+    p.setPressure(1, map(pot, 0, 63, 55, 90));
+  }
 }
 

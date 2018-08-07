@@ -3,11 +3,11 @@
 PneuDuino p;
 
 // number of valve boards
-#define N 5
+#define N 3
 
 
 // length of the wave cycle
-unsigned long cycle_length = 2000L;
+unsigned long cycle_length = 1000L;
 // time that the most recent cycle began
 unsigned long cycle_start_time;
 
@@ -16,7 +16,7 @@ unsigned long on_times[2*N];
 unsigned long off_times[2*N];
 
 // duration to keep each valve on
-unsigned long on_duration = 100L;
+unsigned long on_duration = 700L;
 
 
 void setup() {
@@ -26,9 +26,10 @@ void setup() {
   p.setAddressMode(PNEUDUINO_ADDRESS_VIRTUAL);
 }
 
-
 void loop() {
   p.update();
+
+  if(!p.readButton(0)) return;
 
   // get the current time
   unsigned long m = millis();
