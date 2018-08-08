@@ -161,7 +161,7 @@ int PneuDuino::readPressure(int address)
   return pressure[address];
 }
 
-bool PneuDuino::readButton(int number)
+bool PneuDuino::readButton(int number = 0)
 {
   if (nodes[12] == 0) return 0;
   if (number == 0) return !io_btn2;
@@ -174,6 +174,47 @@ int PneuDuino::readPot()
   if (nodes[12] == 0) return -1;
   return io_pot;
 }
+
+unsigned int PneuDuino::readAnalog(int number)
+{
+    if(number == 0)
+        return adc.readADC_SingleEnded(0);
+    if(number == 1)
+        return adc.readADC_SingleEnded(2);
+
+    return 0;
+}
+
+unsigned int PneuDuino::readAnalogRaw(int number)
+{
+    return adc.readADC_SingleEnded(number);
+}
+
+int PneuDuino::readAnalogDifferential(int number)
+{
+    if(number == 0)
+        return adc.readADC_Differential_0_1();
+    if(number == 1)
+        return adc.readADC_Differential_2_3();
+
+    return 0;
+}
+
+void PneuDuino::setAnalogAddressJumper(bool state)
+{
+    // jumper is attached, address is incremented
+    if(state) {
+        adc = Adafruit_ADS1015(1 + ADS1015_ADDRESS);
+    }
+
+    // no jumper, default address
+    else {
+        adc = Adafruit_ADS1015(ADS1015_ADDRESS);
+    }
+}
+
+
+
 
 int PneuDuino::getNodeAmount()
 {

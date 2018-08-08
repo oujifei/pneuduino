@@ -77,12 +77,24 @@ public:
   int readPressure(int address);
 
   // Button: returns true when pressed
-  // For a single-button board, the button numher is 0 (zero)
-  bool readButton(int number);
+  // For a single-button board, the button number is 0 (zero)
+  bool readButton(int number = 0);
 
   // Potentiometer: returns its position
   // Values range from 0 (leftmost) to 63 (rightmost)
   int readPot();
+
+  // Analog sensor: ANALOG_0 and ANALOG_1 ports on sensor board
+  // Each analog port has two channels:
+  //    A0 and A1 on ANALOG_0
+  //    A2 and A3 on ANALOG_1
+  // readAnalog reads the default channel (A0 or A2). Use this for most Grove sensors.
+  // readAnalogRaw directly returns the reading for A0, A1, A2, A3
+  // readAnalogDifferential reads the difference between the 2 channels on a port.
+  unsigned int readAnalog(int number);
+  unsigned int readAnalogRaw(int number);
+  int readAnalogDifferential(int number);
+  void setAnalogAddressJumper(bool state);
 
   // Returns the number of extension boards connected
   int getNodeAmount();
@@ -105,6 +117,8 @@ private:
 
 
  private:
+  Adafruit_ADS1015 adc;
+
   Adafruit_PWMServoDriver leds;
   int LEDmap[12] = {8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7};
 
