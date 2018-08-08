@@ -1,0 +1,1 @@
+Adafruit_ADS1X15/Adafruit_ADS1015.h

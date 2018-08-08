@@ -1,0 +1,6 @@
+[submodule "library/PneuDuino/Adafruit-PWM-Servo-Driver-Library"]
+	path = library/PneuDuino/Adafruit-PWM-Servo-Driver-Library
+	url = https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library.git
+[submodule "library/PneuDuino/Adafruit_ADS1X15"]
+	path = library/PneuDuino/Adafruit_ADS1X15
+	url = https://github.com/adafruit/Adafruit_ADS1X15.git
