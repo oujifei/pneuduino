@@ -14,8 +14,9 @@
  #include "WProgram.h"
 #endif
 
-#include <Adafruit_PWMServoDriver.h>
 #include "Arduino.h"
+#include "Adafruit-PWM-Servo-Driver-Library/Adafruit_PWMServoDriver.h"
+#include "Adafruit_ADS1X15/Adafruit_ADS1015.h"
 
 #define LED 13
 #define CONNECT_BTN 0
