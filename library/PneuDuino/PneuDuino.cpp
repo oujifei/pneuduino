@@ -1,10 +1,5 @@
-/***************************************************
-
- ****************************************************/
-
 #include <PneuDuino.h>
 #include <Wire.h>
-#include "avr/interrupt.h"
 
 #if defined(__AVR__)
  #define WIRE Wire
@@ -22,7 +17,7 @@ PneuDuino::PneuDuino()
 {
 }
 
-void PneuDuino::begin(void)
+void PneuDuino::begin()
 {
   pinMode(LED, OUTPUT);
   pinMode(CONNECT_BTN, INPUT_PULLUP);
@@ -245,7 +240,7 @@ void PneuDuino::setAllLEDs(int value)
   }
 }
 
-void PneuDuino::checkNodes(void)
+void PneuDuino::checkNodes()
 {
   // this is where to distinguish between IO and valve. send different requests accordingly.
   // for the 11 valves
@@ -411,81 +406,3 @@ void PneuDuino::reset()
 }
 
 
-
-
-/****************************
- * THINGS TO BE IMPLEMENTED *
- ****************************/
-/*
-
-bool PneuDuino::checkTouch(int address)
-{
-  if (nodes[address] == 0) return false;
-  return touched[address];
-}
-
- String PneuDuino::getState(int address)
-{
-  if (nodes[address] == 0) return "X";
-  if (states[address] == 'X') return "NC";
-  if (states[address] == 'I') return "INFLATE";
-  if (states[address] == 'D') return "DEFLATE";
-  if (states[address] == 'H') return "HOLD";
-  if (states[address] == 'R') return "OPEN";
-  return "ERROR";
-}
-*/
-
-/*
-void PneuDuino::hold(int address, int side)
-{
-  if (nodes[address] != 1) return;
-
-  byte b = 'H';
-  Wire.beginTransmission(address);
-  Wire.write(b);
-  Wire.endTransmission();
-}
-
-void PneuDuino::clear(int address, int side)
-{
-  if (nodes[address] != 1) return;
-
-  byte b = 'R';
-  Wire.beginTransmission(address);
-  Wire.write(b);
-  Wire.endTransmission();
-}
-*/
-/*
-void PneuDuino::recalibrate(int address)
-{
-  if (nodes[address] != 1) return;
-
-  byte b = 'C';
-  Wire.beginTransmission(address);
-  Wire.write(b);
-  Wire.endTransmission();
-}
-
-
-void PneuDuino::inflate(int address, int pressure)
-{
-  if (nodes[address] != 1) return;
-  //pressureHACK = pressure;
-
-  byte b = 'P';
-  byte p = byte(pressure);
-  Wire.beginTransmission(address);
-  Wire.write(b);
-  Wire.write(p);
-  Wire.endTransmission();
-}
-*/
-
-/*
-PneuDuino::reset()
-{
-
-}
-*/

@@ -41,13 +41,13 @@ public:
   PneuDuino();
 
   // Call this function once in setup()
-  void begin(void);
+  void begin();
 
   // Call this function once in loop()
-  void update(void);
+  void update();
 
   // Change between physical and virtual addresses
-  // setAddressMode(PNEUDUINO_ADDRESS_PHYSICAL) 
+  // setAddressMode(PNEUDUINO_ADDRESS_PHYSICAL)
   // setAddressMode(PNEUDUINO_ADDRESS_VIRTUAL)
   void setAddressMode(int mode);
 
@@ -101,47 +101,34 @@ public:
   int getNodeAmount();
 
 private:
-  void reset(void);
-
-
-/*
- * TO BE IMPLEMENTED:
-
-  void hold(int address, int side);
-  void clear(int address, int side);
-  void inflate(int address, int pressure);
-  bool checkTouch(int address);
-  String getState(int address);
-  void recalibrate(int address);
-*/
-
-
-
- private:
+  // I2C ADC on sensor board
   Adafruit_ADS1015 adc;
 
+  // LED driver on master board
   Adafruit_PWMServoDriver leds;
   int LEDmap[12] = {8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7};
 
+  // Node and valve states
   int nodes[13]      = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   int valves[13]     = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   int valves_new[13] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+  // Pressure states
   int pressure[13]     = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   int set_pressure[13] = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
   unsigned long last_pressure;
 
-  bool touched[13] =  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-  char states[13] = {'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'} ;
-
+  // Virtual address map
   int address_mode = PNEUDUINO_ADDRESS_PHYSICAL;
   int address_map[13] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+
+  void reset();
 
   void setLED(int pos, int value);
   void setAllLEDs(int value);
 
-  void checkNodes(void);
-  void scanNodes(void);
+  void checkNodes();
+  void scanNodes();
 
   bool io_btn1 = false;
   bool io_btn2 = false;
