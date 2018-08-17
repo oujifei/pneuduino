@@ -37,4 +37,5 @@ These examples combine multiple features and showcase more complex capabilities 
 * [24 Haptic (Vibration) Feedback](./Haptic)
 * [25 Wave](./Wave)
 * [26 Pressure Regulator v2](./PressureRegulator2)
+* [27 Sensor Hub](./SensorHub)
 
